@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<form action="/create-message" method="post">
+    <input type="text" placeholder="Write a message" name="message" style="width: 350px;"/>
+    <button type="submit">Submit</button>
+</form></br>
+<form action="/delete-message" method= "post">
+    <input type="number" placeholder="Message #" name="id" style="width: 100px;"/>
+    <button type="submit">Delete</button>
+</form></br>
+<form action= "/edit-message" method= "post">
+    <input type= "number" placeholder="Message #" name="editid" style="width: 100px;"/>
+    <input type= "text" placeholder="Edit message" name="edit" style="width: 350px;"/>
+    <button type = "submit">Edit</button>
+</form>
+<p></p><b>Messages by {{name}}:</b></p>
+<ol>
+{{#messages}}
+<li>{{message}}</li>
+{{/messages}}
+</ol>
+<br>
+<form action="/logout" method="post">
+    <button type="submit">Logout</button>
+</form>
+</body>
+</html>
